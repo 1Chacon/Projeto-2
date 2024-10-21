@@ -69,7 +69,100 @@ int main() {
             strcpy(perguntas[i].alternativas[3], "Mississippi");
             perguntas[i].resposta = 1;
         }
+        // Pergunta 6
+          else if (i == 5) {
+            strcpy(perguntas[i].pergunta, "Qual é o elemento químico representado pela letra O ?");
+            strcpy(perguntas[i].alternativas[0], "Ouro");
+            strcpy(perguntas[i].alternativas[1], "Oxigênio");
+            strcpy(perguntas[i].alternativas[2], "Ósmio");
+            strcpy(perguntas[i].alternativas[3], "Oxalato");
+            perguntas[i].resposta = 2;
+        }
+              
+         // Pergunta 7
+          else if (i == 6) {
+            strcpy(perguntas[i].pergunta, "Quantos continentes existem no mundo?");
+            strcpy(perguntas[i].alternativas[0], "5");
+            strcpy(perguntas[i].alternativas[1], "6");
+            strcpy(perguntas[i].alternativas[2], "7");
+            strcpy(perguntas[i].alternativas[3], "8");
+            perguntas[i].resposta = 3;
+        }
+                      
+         // Pergunta 8
+          else if (i == 7) {
+            strcpy(perguntas[i].pergunta, "Em que ano começou a Segunda Guerra Mundial?");
+            strcpy(perguntas[i].alternativas[0], "1914");
+            strcpy(perguntas[i].alternativas[1], "1939");
+            strcpy(perguntas[i].alternativas[2], "1941");
+            strcpy(perguntas[i].alternativas[3], "1929");
+            perguntas[i].resposta = 2;
+        }
+        
+        
+         // Pergunta 9
+          else if (i == 8) {
+            strcpy(perguntas[i].pergunta, "Qual a capital da França?");
+            strcpy(perguntas[i].alternativas[0], "Roma");
+            strcpy(perguntas[i].alternativas[1], "Londres");
+            strcpy(perguntas[i].alternativas[2], "Paris");
+            strcpy(perguntas[i].alternativas[3], "Berlim");
+            perguntas[i].resposta = 3;
+        }
+        
+         // Pergunta 10
+          else if (i == 9) {
+            strcpy(perguntas[i].pergunta, "Qual o resultado de 9 x 9?");
+            strcpy(perguntas[i].alternativas[0], "72");
+            strcpy(perguntas[i].alternativas[1], "81");
+            strcpy(perguntas[i].alternativas[2], "91");
+            strcpy(perguntas[i].alternativas[3], "99");
+            perguntas[i].resposta = 2;
+        }
+        
+             // Pergunta 11
+          else if (i == 10 ) {
+            strcpy(perguntas[i].pergunta, "Qual é o maior oceano da Terra?");
+            strcpy(perguntas[i].alternativas[0], "Oceano Atlântico");
+            strcpy(perguntas[i].alternativas[1], "Oceano Índico");
+            strcpy(perguntas[i].alternativas[2], "Oceano Ártico");
+            strcpy(perguntas[i].alternativas[3], "Oceano Pacífico");
+            perguntas[i].resposta = 4;
+        }
 
+        
+         // Pergunta 
+          else if (i == ) {
+            strcpy(perguntas[i].pergunta, " ");
+            strcpy(perguntas[i].alternativas[0], " ");
+            strcpy(perguntas[i].alternativas[1], " ");
+            strcpy(perguntas[i].alternativas[2], " ");
+            strcpy(perguntas[i].alternativas[3], " ");
+            perguntas[i].resposta = ;
+        }
+
+        
+         // Pergunta 
+          else if (i == ) {
+            strcpy(perguntas[i].pergunta, " ");
+            strcpy(perguntas[i].alternativas[0], " ");
+            strcpy(perguntas[i].alternativas[1], " ");
+            strcpy(perguntas[i].alternativas[2], " ");
+            strcpy(perguntas[i].alternativas[3], " ");
+            perguntas[i].resposta = ;
+        }
+
+        
+         // Pergunta 
+          else if (i == ) {
+            strcpy(perguntas[i].pergunta, " ");
+            strcpy(perguntas[i].alternativas[0], " ");
+            strcpy(perguntas[i].alternativas[1], " ");
+            strcpy(perguntas[i].alternativas[2], " ");
+            strcpy(perguntas[i].alternativas[3], " ");
+            perguntas[i].resposta = ;
+        }
+        
         // Escrever pergunta no arquivo
         fwrite(&perguntas[i], sizeof(Pergunta), 1, arquivo_perguntas);
 
@@ -83,4 +176,16 @@ int main() {
     return 0;
 }
 
+
+
+         // Pergunta 
+          else if (i == ) {
+            strcpy(perguntas[i].pergunta, " ");
+            strcpy(perguntas[i].alternativas[0], " ");
+            strcpy(perguntas[i].alternativas[1], " ");
+            strcpy(perguntas[i].alternativas[2], " ");
+            strcpy(perguntas[i].alternativas[3], " ");
+            perguntas[i].resposta = ;
+        }
+        
 
