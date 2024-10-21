@@ -973,37 +973,53 @@ int main() {
         
         //Pergunta 97
         else if (i == 96) {
-            strcpy(perguntas[i].pergunta,"" );
-            strcpy(perguntas[i].alternativas[0], " ");
-            strcpy(perguntas[i].alternativas[1], " ");
-            strcpy(perguntas[i].alternativas[2], " ");
-            strcpy(perguntas[i].alternativas[3], " ");
-            perguntas[i].resposta = ;
+            strcpy(perguntas[i].pergunta,"De onde é a invenção do chuveiro elétrico?" );
+            strcpy(perguntas[i].alternativas[0], "França");
+            strcpy(perguntas[i].alternativas[1], "Inglaterra");
+            strcpy(perguntas[i].alternativas[2], "Brasil");
+            strcpy(perguntas[i].alternativas[3], "Austrália");
+            perguntas[i].resposta = 3;
         }
         
         
         //Pergunta 98
         else if (i == 97) {
-            strcpy(perguntas[i].pergunta, );
-            strcpy(perguntas[i].alternativas[0], " ");
-            strcpy(perguntas[i].alternativas[1], " ");
-            strcpy(perguntas[i].alternativas[2], " ");
-            strcpy(perguntas[i].alternativas[3], " ");
-            perguntas[i].resposta = ;
+            strcpy(perguntas[i].pergunta,"Qual o livro mais vendido no mundo a seguir à Bíblia?" );
+            strcpy(perguntas[i].alternativas[0], "O Senhor dos Anéis");
+            strcpy(perguntas[i].alternativas[1], "Dom Quixote");
+            strcpy(perguntas[i].alternativas[2], "O Pequeno Príncipe");
+            strcpy(perguntas[i].alternativas[3], "Ela, a Feiticeira");
+            perguntas[i].resposta =2 ;
+        }
+        
+        //Pergunta 99
+        else if (i == 98) {
+            strcpy(perguntas[i].pergunta,"Qual a nacionalidade de Che Guevara?" );
+            strcpy(perguntas[i].alternativas[0], "Boliviana");
+            strcpy(perguntas[i].alternativas[1], "Cubana");
+            strcpy(perguntas[i].alternativas[2], "Argentina");
+            strcpy(perguntas[i].alternativas[3], "Peruana");
+            perguntas[i].resposta = 3;
+        }
+        
+        //Pergunta 100
+        else if (i == 99) {
+            strcpy(perguntas[i].pergunta,"Atualmente(2024), quantos elementos químicos a tabela periódica possui?" );
+            strcpy(perguntas[i].alternativas[0], "113");
+            strcpy(perguntas[i].alternativas[1], "109");
+            strcpy(perguntas[i].alternativas[2], "108");
+            strcpy(perguntas[i].alternativas[3], "118");
+            perguntas[i].resposta = 4;
         }
 
-
-
-
-        
-
-
-
-        // Escrever pergunta no arquivo
         fwrite(&perguntas[i], sizeof(Pergunta), 1, arquivo_perguntas);
-
-@@ -84,3 +571,15 @@ int main() {
+        i++;
+    }
+    return 0;
 }
+  
+
+
 
 
 
