@@ -1,0 +1,16 @@
+Bem vindo ao Tutorial do nosso jogo!
+
+Nosso jogo de perguntas e respostas inicia ao selecionar a opcao 1 "Jogar".
+Um total de 20 perguntas aleatorias serao selecionadas de nosso banco de dados, cada pergunta apresentando 4 alternativas.
+Voce deve selecionar a resposta correta digitando o numero da alternativa.
+Se sua resposta estiver correta o jogo ira proseguir para a proxima pergunta, mas se sua resposta estiver incorretaa o jogo ira terminar e seu placar sera exbibido.
+
+Aqui esta um exemplo:
+
+Q: Qual a capital do Brasil.
+1.Sao Paulo
+2.Rio de Janeiro
+3.Brasilia
+4.Nova York
+Selecione uma opcao: 
+

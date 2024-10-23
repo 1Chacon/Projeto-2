@@ -1,0 +1,16 @@
+Jogador1 18
+Jogador2 12
+Jogador3 20
+Jogador4 7
+Jogador5 15
+Jogador6 9
+Jogador7 19
+Jogador8 11
+Jogador9 16
+Jogador10 8
+Jogador11 14
+Jogador12 13
+Jogador13 10
+Jogador14 17
+Jogador15 6
+teste 0
