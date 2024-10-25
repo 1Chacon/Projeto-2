@@ -187,3 +187,179 @@ void add_pergunta() {
 
 
 
+
+void remov_pergunta() {
+    printf("--------------------------------------------------------- \n");
+    FILE *arquivo_perguntas, *arquivo_temp;
+    Pergunta perguntas[MAX_PERGUNTAS];
+    int i, qtd_perguntas = 0;
+
+    // Abrir o arquivo de perguntas em modo de leitura binária
+    arquivo_perguntas = fopen("perguntas_jogo.bin", "rb");
+    if (arquivo_perguntas == NULL) {
+        printf("Erro ao abrir o arquivo perguntas_jogo.bin.\n");
+        return;
+    }
+
+    // Ler perguntas do arquivo
+    while (fread(&perguntas[qtd_perguntas], sizeof(Pergunta), 1, arquivo_perguntas) == 1) {
+        qtd_perguntas++;
+    }
+    fclose(arquivo_perguntas);
+
+    // Exibir perguntas
+    printf("Perguntas:\n");
+    for (i = 0; i < qtd_perguntas; i++) {
+        printf("%d. %s\n", i + 1, perguntas[i].pergunta);
+    }
+
+    // Solicitar a pergunta a ser removida
+    int pergunta_selecionada;
+    printf("Digite o numero da pergunta que voce deseja remover: ");
+    scanf("%d", &pergunta_selecionada);
+
+    // Verificar se a pergunta existe
+    if (pergunta_selecionada < 1 || pergunta_selecionada > qtd_perguntas) {
+        printf("Pergunta nao encontrada.\n");
+        return;
+    }
+
+    // Exibir a pergunta selecionada
+    printf("Pergunta selecionada: %s\n", perguntas[pergunta_selecionada - 1].pergunta);
+
+    // Confirmar a remoção
+    int confirmacao;
+    printf("Voce deseja remover esta pergunta? (1 - Sim, 2 - Nao): ");
+    scanf("%d", &confirmacao);
+
+    if (confirmacao == 1) {
+        // Criar um arquivo temporário
+        arquivo_temp = fopen("temp.bin", "wb");
+        if (arquivo_temp == NULL) {
+            printf("Erro ao criar arquivo temporário.\n");
+            return;
+        }
+
+        // Escrever todas as perguntas, exceto a selecionada
+        for (i = 0; i < qtd_perguntas; i++) {
+            if (i != pergunta_selecionada - 1) {
+                fwrite(&perguntas[i], sizeof(Pergunta), 1, arquivo_temp);
+            }
+        }
+
+        fclose(arquivo_temp);
+    }
+}
+
+
+
+void add_jogador() {
+    printf("--------------------------------------------------------- \n");
+    FILE *arquivo_placar;
+    char nome[50];
+    int pontuacao;
+
+    // Solicitar o nome do jogador
+    printf("Digite o nome do jogador: ");
+    scanf("%s", nome);
+
+    // Solicitar a pontuação do jogador
+    printf("Digite a pontuacao do jogador (entre 0 e 20): ");
+    scanf("%d", &pontuacao);
+
+    // Verificar se a pontuação está dentro do intervalo válido
+    while (pontuacao < 0 || pontuacao > 20) {
+        printf("Pontuacao invalida. Por favor, digite uma pontuacao entre 0 e 20: ");
+        scanf("%d", &pontuacao);
+    }
+
+    // Confirmar os dados
+    printf("Voce deseja adicionar o jogador %s com pontuacao %d? (1 - Sim, 2 - Nao): ", nome, pontuacao);
+    int confirmacao;
+    scanf("%d", &confirmacao);
+
+    if (confirmacao == 1) {
+        // Abrir o arquivo em modo de adição
+        arquivo_placar = fopen("placar_jogadores.txt", "a");
+        if (arquivo_placar == NULL) {
+            printf("Erro ao abrir o arquivo placar_jogadores.txt.\n");
+            return;
+        }
+
+        // Escrever o nome e a pontuação no arquivo
+        fprintf(arquivo_placar, "%s %d\n", nome, pontuacao);
+        fclose(arquivo_placar);
+
+        printf("Jogador adicionado com sucesso!\n");
+    } else {
+        printf("Adicao cancelada.\n");
+    }
+}
+       
+
+
+void remov_jogador() {
+    printf("--------------------------------------------------------- \n");
+    FILE *arquivo_placar, *arquivo_temp;
+    char nome[50];
+    char linha[100];
+    int encontrado = 0;
+
+    // Abrir o arquivo de placar em modo de leitura
+    //madebyRodrigoCastanho
+    arquivo_placar = fopen("placar_jogadores.txt", "r");
+    if (arquivo_placar == NULL) {
+        printf("Erro ao abrir o arquivo placar_jogadores.txt.\n");
+        return;
+    }
+
+    // Exibir todos os jogadores e suas pontuações
+    printf("Jogadores e suas pontuacoes:\n");
+    while (fgets(linha, sizeof(linha), arquivo_placar) != NULL) {
+        printf("%s", linha);
+    }
+    fclose(arquivo_placar);
+
+    // Solicitar o nome do jogador a ser removido
+    printf("Digite o nome do jogador que voce deseja remover: ");
+    scanf("%s", nome);
+
+    // Confirmar a remoção
+    printf("Voce deseja remover o jogador %s? (1 - Sim, 2 - Nao): ", nome);
+    int confirmacao;
+    scanf("%d", &confirmacao);
+
+    if (confirmacao == 1) {
+        // Abrir o arquivo de placar em modo de leitura novamente
+        arquivo_placar = fopen("placar_jogadores.txt", "r");
+        arquivo_temp = fopen("temp.txt", "w");
+        if (arquivo_placar == NULL || arquivo_temp == NULL) {
+            printf("Erro ao abrir os arquivos.\n");
+            return;
+        }
+
+        // Copiar todos os jogadores, exceto o que será removido
+        while (fgets(linha, sizeof(linha), arquivo_placar) != NULL) {
+            if (strstr(linha, nome) == NULL) {
+                fputs(linha, arquivo_temp); // Escrever no arquivo temporário
+            } else {
+                encontrado = 1; // Jogador encontrado para remoção
+            }
+        }
+
+        fclose(arquivo_placar);
+        fclose(arquivo_temp);
+
+        // Substituir o arquivo original pelo temporário
+        remove("placar_jogadores.txt");
+        rename("temp.txt", "placar_jogadores.txt");
+
+        if (encontrado) {
+            printf("Jogador %s removido com sucesso!\n", nome);
+        } else {
+            printf("Jogador %s nao encontrado.\n", nome);
+        }
+    } else {
+        printf("Remocao cancelada.\n");
+    }
+}
