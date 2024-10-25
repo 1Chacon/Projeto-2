@@ -83,3 +83,107 @@ void jogar() {
     printf("Pontuacao final: %d\n", pontuacao);
 }
 
+void exibir_tutorial() {
+    printf("--------------------------------------------------------- \n");
+    FILE *arquivo_tutorial;
+    char linha[1024];
+
+    arquivo_tutorial = fopen("tutorial.txt", "r");
+    if (arquivo_tutorial == NULL) {
+        printf("Erro ao abrir o arquivo tutorial.txt.\n");
+        return;
+    }
+
+    while (fgets(linha, sizeof(linha), arquivo_tutorial)) {
+        printf("%s", linha);
+    }
+
+    fclose(arquivo_tutorial);
+}
+
+
+
+void exibir_placar() {
+    printf("--------------------------------------------------------- \n");
+    FILE *arquivo_placar;
+    Jogador jogadores[MAX_JOGADORES];
+    int i, qtd_jogadores = 0;
+
+    arquivo_placar = fopen("placar_jogadores.txt", "r");
+    if (arquivo_placar == NULL) {
+        printf("Erro ao abrir o arquivo placar_jogadores.txt.\n");
+        return;
+    }
+
+    while (fscanf(arquivo_placar, "%s %d", jogadores[qtd_jogadores].nome, &jogadores[qtd_jogadores].pontuacao) == 2) {
+        qtd_jogadores++;
+    }
+
+    fclose(arquivo_placar);
+
+    // Ordenar jogadores por pontuação
+    for (i = 0; i < qtd_jogadores - 1; i++) {
+        for (int j = i + 1; j < qtd_jogadores; j++) {
+            if (jogadores[i].pontuacao < jogadores[j].pontuacao) {
+                Jogador temp = jogadores[i];
+                jogadores[i] = jogadores[j];
+                jogadores[j] = temp;
+            }
+        }
+    }
+
+    // Exibir placar
+    printf("Placar:\n");
+    int limite = (qtd_jogadores < 10) ? qtd_jogadores : 10;
+    for (i = 0; i < limite; i++) {
+        printf("%s - %d/%d\n", jogadores[i].nome, jogadores[i].pontuacao, MAX_PONTUACAO);
+    }
+}
+
+
+
+void add_pergunta() {
+    printf("--------------------------------------------------------- \n");
+    FILE *arquivo_perguntas;
+    Pergunta nova_pergunta;
+
+    // Abrir o arquivo de perguntas em modo de adição binária
+    arquivo_perguntas = fopen("perguntas_jogo.bin", "ab");
+    if (arquivo_perguntas == NULL) {
+        printf("Erro ao abrir o arquivo perguntas_jogo.bin.\n");
+        return;
+    }
+
+    // Solicitar a nova pergunta
+    printf("Digite a nova pergunta: ");
+    getchar(); // Limpar o buffer do stdin
+    fgets(nova_pergunta.pergunta, sizeof(nova_pergunta.pergunta), stdin);
+    nova_pergunta.pergunta[strcspn(nova_pergunta.pergunta, "\n")] = 0; // Remover o caractere de nova linha
+
+    // Solicitar as alternativas
+    for (int i = 0; i < MAX_RESPOSTAS; i++) {
+        printf("Digite a alternativa %d: ", i + 1);
+        fgets(nova_pergunta.alternativas[i], sizeof(nova_pergunta.alternativas[i]), stdin);
+        nova_pergunta.alternativas[i][strcspn(nova_pergunta.alternativas[i], "\n")] = 0; // Remover o caractere de nova linha
+    }
+
+    // Solicitar a resposta correta
+    printf("Digite o numero da resposta correta (1-%d): ", MAX_RESPOSTAS);
+    scanf("%d", &nova_pergunta.resposta);
+    
+    // Validar a resposta
+    if (nova_pergunta.resposta < 1 || nova_pergunta.resposta > MAX_RESPOSTAS) {
+        printf("Resposta invalida. A resposta deve ser um numero entre 1 e %d.\n", MAX_RESPOSTAS);
+        fclose(arquivo_perguntas);
+        return;
+    }
+
+    // Escrever a nova pergunta no arquivo
+    fwrite(&nova_pergunta, sizeof(Pergunta), 1, arquivo_perguntas);
+    fclose(arquivo_perguntas);
+
+    printf("Pergunta adicionada com sucesso!\n");
+}
+
+
+
