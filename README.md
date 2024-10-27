@@ -33,18 +33,26 @@ A funcao exibir_tutorial ira abrir e ler um arquivo de texto que contem o tutori
 A funcao exibir_placar ira abir e ler os dados de um aruivo dde texto que contem o nome e pontuacao de todos os jogadores. Em seguida ele ira organizar os jogadores em ordem da maior pontuacao para a menor e exibir os top 10 jogadores e sua pontuacao.
 
 -4. Editar Dados:
+Ao selecionar esta opcao o menu de edicao sera aberto. Neste menu ha 4 funcoes que permmitem ao usuario editar os arquivos de texto e binario que compem o projeto.
+
+    -1. Adicionar Pergunta: Permite o usuario adicionar uma pergunta aoo arquivo binario.
+    A funcao add_pergunta ira solicitar ao usuario a pergunta que ele deseja adicionar ao jogo, apos isso ele ira solicitar as 4 alternativas e a resposta. O programa ira pedir a confirmacao do usuario. Se ele confirmar as informacaoes serao Apend ao arquivo binario, senao a operacao é cancelada.
+
+    -2. Remover Pergunta: Permite ao usuario remover alguma pergunta do arquivo binario.
+    A funcao remov_pergunta ira exibir ao usuario todas as perguntas que estao no arquivo binario. Ele deve digitar o numero da pergunta que deseja remover e confirmar a operacao para que ela prosiga.
+
+    -3. Adicionar Jogador: Permite o usuario adicionar um jogador e pontuacao ao placar sem ter de jogar.
+    A funcao add_jogador ira ira solicitar ao usuario o nome do jogador que ele deseja adicinar ao arquivo de texto e a pontuacao deste jogador. Apos confirmar estes dados as informacoes serao adicionadas ao placar.
+
+    -4. Remover Jogador: Permite ao usuario remover um jogador do Placar.
+    A funcao remov_jogador ira ira solicitar ao usuario o nome do jogador que ele deseja remover ao arquivo de texto. Apos confirmar estes dados as informacoes serao removidas do placar.
+
+    -5. Sair:
+    Ao selecionar esta opcao o programa retorna ao menu padrao.
 
 -5. Sair:
+Ao selecionar esta opcao o programa se encerra.
 
--Gerenciamento de Perguntas: É possível selecionar uma pergunta para remover, facilitando ajustes no banco de perguntas.
-
--Gerenciamento de Jogadores: O sistema armazena até 10 jogadores.
-
--Adiciona novos jogadores à lista.
-
--Substitui o jogador com menos pontos caso o limite de 10 jogadores seja atingido.
-
--Exibe mensagem de "jogador não encontrado" caso uma busca seja feita sem sucesso.
 ===============================================================================================
 
 Regras do Jogo:
