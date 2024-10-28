@@ -1,8 +1,8 @@
 # Projeto-2
 
-Igor Eizo Ramos Kanazawa| RA: 24.124.040-7
-Rodrigo Inoue Castanho | RA: 24.124.037-3
-WILSON MASSAIOLLI CHACON | RA: 24.124.038-1
+    Igor Eizo Ramos Kanazawa| RA: 24.124.040-7
+    Rodrigo Inoue Castanho | RA: 24.124.037-3
+    WILSON MASSAIOLLI CHACON | RA: 24.124.038-1
 
 ============================================================================
 Este projeto é um jogo de quiz em linguagem C jogado no terminal. Ele foi projetado para desafiar o jogador com 20 de 100 perguntas de múltipla escolha. Com um sistema de pontuação e um menu interativo, o jogo permite que o jogador teste seus conhecimentos e concorra para ficar entre os 10 melhores jogadores.
