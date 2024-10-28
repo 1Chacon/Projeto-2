@@ -63,5 +63,5 @@ Compilador C (como GCC), para compilar corretamente os arquivos main.c e projeto
 
 Sistema que suporte um terminal para rodar o programa como por exemplo: vscode
 
-Caso queira, deixamos um arquivo .exe que roda o programa. Então é so baixar, estrair os arquivos e jogar!
+Caso queira, deixamos um arquivo .exe que roda o programa. Então é so baixar, extrair os arquivos e jogar!
 
