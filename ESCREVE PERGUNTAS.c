@@ -71,10 +71,10 @@ int main() {
         }
 // Pergunta 6
           else if (i == 5) {
-            strcpy(perguntas[i].pergunta, "Qual é o elemento químico representado pela letra O ?");
+            strcpy(perguntas[i].pergunta, "Qual eh o elemento quimico representado pela letra O ?");
             strcpy(perguntas[i].alternativas[0], "Ouro");
-            strcpy(perguntas[i].alternativas[1], "Oxigênio");
-            strcpy(perguntas[i].alternativas[2], "Ósmio");
+            strcpy(perguntas[i].alternativas[1], "Oxigenio");
+            strcpy(perguntas[i].alternativas[2], "Osmio");
             strcpy(perguntas[i].alternativas[3], "Oxalato");
             perguntas[i].resposta = 2;
         }
@@ -91,7 +91,7 @@ int main() {
 
          // Pergunta 8
           else if (i == 7) {
-            strcpy(perguntas[i].pergunta, "Em que ano começou a Segunda Guerra Mundial?");
+            strcpy(perguntas[i].pergunta, "Em que ano comecou a Segunda Guerra Mundial?");
             strcpy(perguntas[i].alternativas[0], "1914");
             strcpy(perguntas[i].alternativas[1], "1939");
             strcpy(perguntas[i].alternativas[2], "1941");
@@ -102,7 +102,7 @@ int main() {
 
          // Pergunta 9
           else if (i == 8) {
-            strcpy(perguntas[i].pergunta, "Qual a capital da França?");
+            strcpy(perguntas[i].pergunta, "Qual a capital da Franca?");
             strcpy(perguntas[i].alternativas[0], "Roma");
             strcpy(perguntas[i].alternativas[1], "Londres");
             strcpy(perguntas[i].alternativas[2], "Paris");
@@ -123,20 +123,20 @@ int main() {
              // Pergunta 11
           else if (i == 10 ) {
             strcpy(perguntas[i].pergunta, "Qual e o maior oceano da Terra?");
-            strcpy(perguntas[i].alternativas[0], "Oceano Atlântico");
-            strcpy(perguntas[i].alternativas[1], "Oceano Índico");
-            strcpy(perguntas[i].alternativas[2], "Oceano Ártico");
-            strcpy(perguntas[i].alternativas[3], "Oceano Pacífico");
+            strcpy(perguntas[i].alternativas[0], "Oceano Atlantico");
+            strcpy(perguntas[i].alternativas[1], "Oceano Indico");
+            strcpy(perguntas[i].alternativas[2], "Oceano Artico");
+            strcpy(perguntas[i].alternativas[3], "Oceano Pacifico");
             perguntas[i].resposta = 4;
         }
 
 
          // Pergunta 12
           else if (i == 11) {
-            strcpy(perguntas[i].pergunta, " Qual o nome da estrela mais próxima da Terra?");
+            strcpy(perguntas[i].pergunta, " Qual o nome da estrela mais proxima da Terra?");
             strcpy(perguntas[i].alternativas[0], "Alpha Centauri");
             strcpy(perguntas[i].alternativas[1], "Sol");
-            strcpy(perguntas[i].alternativas[2], "Sírius");
+            strcpy(perguntas[i].alternativas[2], "Sirius");
             strcpy(perguntas[i].alternativas[3], "Betelgeuse");
             perguntas[i].resposta = 2;
         }
@@ -177,9 +177,9 @@ int main() {
 
          // Pergunta 16
           else if (i == 15) {
-            strcpy(perguntas[i].pergunta, "Qual o país mais populoso do mundo?");
+            strcpy(perguntas[i].pergunta, "Qual o pais mais populoso do mundo?");
             strcpy(perguntas[i].alternativas[0], "Estados Unidos");
-            strcpy(perguntas[i].alternativas[1], "Índia");
+            strcpy(perguntas[i].alternativas[1], "India");
             strcpy(perguntas[i].alternativas[2], "Brasil");
             strcpy(perguntas[i].alternativas[3], "China");
             perguntas[i].resposta = 4;
@@ -199,7 +199,7 @@ int main() {
 
          // Pergunta 18
           else if (i == 17 ) {
-            strcpy(perguntas[i].pergunta, "Qual é o valor do número Pi arredondado para duas casas decimais?");
+            strcpy(perguntas[i].pergunta, "Qual eh o valor do número Pi arredondado para duas casas decimais?");
             strcpy(perguntas[i].alternativas[0], "3.12");
             strcpy(perguntas[i].alternativas[1], "3.14");
             strcpy(perguntas[i].alternativas[2], "3.10");
@@ -209,17 +209,17 @@ int main() {
 
          // Pergunta 19
           else if (i == 18) {
-            strcpy(perguntas[i].pergunta, "Em que continente está localizado o Brasil?");
-            strcpy(perguntas[i].alternativas[0], "África");
+            strcpy(perguntas[i].pergunta, "Em que continente esta localizado o Brasil?");
+            strcpy(perguntas[i].alternativas[0], "Africa");
             strcpy(perguntas[i].alternativas[1], "Oceania");
             strcpy(perguntas[i].alternativas[2], "Pangeia");
-            strcpy(perguntas[i].alternativas[3], "América do Sul");
+            strcpy(perguntas[i].alternativas[3], "America do Sul");
             perguntas[i].resposta = 4;
         }
 
          // Pergunta 20
           else if (i ==19 ) {
-            strcpy(perguntas[i].pergunta, "Quem é o autor de A Origem das Espécies?");
+            strcpy(perguntas[i].pergunta, "Quem e o autor de A Origem das Especies?");
             strcpy(perguntas[i].alternativas[0], "Albert Einstein");
             strcpy(perguntas[i].alternativas[1], "Isaac Newton");
             strcpy(perguntas[i].alternativas[2], "Charles Darwin");
@@ -251,7 +251,7 @@ int main() {
                 strcpy(perguntas[i].alternativas[0], "Milao");
                 strcpy(perguntas[i].alternativas[1], "Roma");
                 strcpy(perguntas[i].alternativas[2], "Veneza");
-                strcpy(perguntas[i].alternativas[3], "Florença");
+                strcpy(perguntas[i].alternativas[3], "Florenca");
                 perguntas[i].resposta = 2;
             }
             // Pergunta 24
@@ -368,7 +368,7 @@ int main() {
                 strcpy(perguntas[i].alternativas[0], "A Noite Estrelada");
                 strcpy(perguntas[i].alternativas[1], "O Grito");
                 strcpy(perguntas[i].alternativas[2], "A Persistencia da Memoria");
-                strcpy(perguntas[i].alternativas[3], "A Criacao de Adão");
+                strcpy(perguntas[i].alternativas[3], "A Criacao de Adao");
                 perguntas[i].resposta = 2;
             }
             // Pergunta 37
@@ -395,7 +395,7 @@ int main() {
                 strcpy(perguntas[i].alternativas[0], "Tomate");
                 strcpy(perguntas[i].alternativas[1], "Abacate");
                 strcpy(perguntas[i].alternativas[2], "Cebola");
-                strcpy(perguntas[i].alternativas[3], "Limão");
+                strcpy(perguntas[i].alternativas[3], "Limao");
                 perguntas[i].resposta = 2;
             }
             // Pergunta 40
@@ -466,7 +466,7 @@ int main() {
                 strcpy(perguntas[i].pergunta, "Qual e o maior mamifero do mundo?");
                 strcpy(perguntas[i].alternativas[0], "Elefante");
                 strcpy(perguntas[i].alternativas[1], "Baleia Azul");
-                strcpy(perguntas[i].alternativas[2], "Tubarão");
+                strcpy(perguntas[i].alternativas[2], "Tubarao");
                 strcpy(perguntas[i].alternativas[3], "Girafa");
                 perguntas[i].resposta = 2;
             }
@@ -808,7 +808,7 @@ int main() {
         
         // Pergunta 82
         else if (i == 81) {
-            strcpy(perguntas[i].pergunta, "Qual é o gas utilizado em baloes de festa para que eles flutuem?");
+            strcpy(perguntas[i].pergunta, "Qual eh o gas utilizado em baloes de festa para que eles flutuem?");
             strcpy(perguntas[i].alternativas[0], "Oxigenio");
             strcpy(perguntas[i].alternativas[1], "Helio");
             strcpy(perguntas[i].alternativas[2], "Hidrogenio");
@@ -818,7 +818,7 @@ int main() {
         
         // Pergunta 83
         else if (i == 82) {
-            strcpy(perguntas[i].pergunta, "Em que continente está localizada a Australia?");
+            strcpy(perguntas[i].pergunta, "Em que continente esta localizada a Australia?");
             strcpy(perguntas[i].alternativas[0], "America do Sul");
             strcpy(perguntas[i].alternativas[1], "Africa");
             strcpy(perguntas[i].alternativas[2], "Oceania");
@@ -828,7 +828,7 @@ int main() {
         
         // Pergunta 84
         else if (i == 83) {
-            strcpy(perguntas[i].pergunta, "Quem escreveu \"Hamlet\"?");
+            strcpy(perguntas[i].pergunta, "Quem escreveu Hamlet?");
             strcpy(perguntas[i].alternativas[0], "Dante Alighieri");
             strcpy(perguntas[i].alternativas[1], "William Shakespeare");
             strcpy(perguntas[i].alternativas[2], "Victor Hugo");
@@ -838,7 +838,7 @@ int main() {
         
         // Pergunta 85
         else if (i == 84) {
-            strcpy(perguntas[i].pergunta, "Qual desses paises nao está localizado na America do Sul?");
+            strcpy(perguntas[i].pergunta, "Qual desses paises nao esta localizado na America do Sul?");
             strcpy(perguntas[i].alternativas[0], "Uruguai");
             strcpy(perguntas[i].alternativas[1], "Chile");
             strcpy(perguntas[i].alternativas[2], "Peru");
@@ -878,7 +878,7 @@ int main() {
         
         // Pergunta 89
         else if (i == 88) {
-            strcpy(perguntas[i].pergunta, "O que a sigla \"ADN\" representa em portugues?");
+            strcpy(perguntas[i].pergunta, "O que a sigla ADN representa em portugues?");
             strcpy(perguntas[i].alternativas[0], "Acido desoxirribonucleico");
             strcpy(perguntas[i].alternativas[1], "Acido ribonucleico");
             strcpy(perguntas[i].alternativas[2], "Adenosina");
