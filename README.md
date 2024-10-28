@@ -59,8 +59,9 @@ Requisitos do Sistema:
 
 Para compilar e executar o jogo, você precisará de:
 
-Compilador C (como GCC)
-
+Compilador C (como GCC), para compilar corretamente os arquivos main.c e projeto2.c devem ser compilados juntos.
 
 Sistema que suporte um terminal para rodar o programa como por exemplo: vscode
+
+Caso queira, deixamos um arquivo .exe que roda o programa. Então é so baixar, estrair os arquivos e jogar!
 
