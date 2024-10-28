@@ -55,15 +55,6 @@ Ao selecionar esta opcao o programa se encerra.
 
 ===============================================================================================
 
-Regras do Jogo:
-
-
-O jogo consiste em responder corretamente a todas as 100 perguntas para vencer. Ao errar uma pergunta, o jogo termina e retorna ao início.
-
-O sistema de jogadores mantém um ranking com pontuação, removendo o jogador de menor pontuação caso o limite seja atingido e substituindo pelo novo jogador com melhor desempenho.
-
-==================================================================================================
-
 Requisitos do Sistema:
 
 Para compilar e executar o jogo, você precisará de:
