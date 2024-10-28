@@ -61,7 +61,9 @@ Para compilar e executar o jogo, você precisará de:
 
 Compilador C (como GCC), para compilar corretamente os arquivos main.c e projeto2.c devem ser compilados juntos.
 
-Sistema que suporte um terminal para rodar o programa como por exemplo: vscode. Pode ser usado este codigo no CMD para compilar os arquivos ( gcc main.c projeto2.c -o jogo.exe )
+Sistema que suporte um terminal para rodar o programa como por exemplo: vscode. 
+
+Pode ser usado este codigo no CMD para compilar os arquivos ( gcc main.c projeto2.c -o jogo.exe ), e este para rodar ( ./jogo.exe )
 
 Caso queira, deixamos um arquivo .exe que roda o programa. Então é so baixar, extrair os arquivos e jogar!
 
